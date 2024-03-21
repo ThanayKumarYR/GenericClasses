@@ -27,5 +27,15 @@ namespace GenericClasses
             }
             return large;
         }
+
+        public static string MaxOfInput(StringObject stringObject)
+        {
+            string large = "";
+            foreach (string item in stringObject.Strings)
+            {
+                if (large.CompareTo(item) < 0) large = item;
+            }
+            return large;
+        }
     }
 }

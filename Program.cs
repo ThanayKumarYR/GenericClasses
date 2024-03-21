@@ -24,6 +24,11 @@ namespace GenericClasses
                 float largefloat = Maximum.MaxOfInput(floatObject);
                 floatObject.PrintObject();
                 floatObject.Display(largefloat);
+
+                StringObject stringObject = new StringObject("Apple", "Peach", "Banana");
+                string largestring = Maximum.MaxOfInput(stringObject);
+                stringObject.PrintObject();
+                stringObject.Display(largestring);
             }
             catch (Exception ex) 
             {
