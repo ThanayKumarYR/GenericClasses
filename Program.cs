@@ -10,7 +10,7 @@ namespace GenericClasses
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Generic classes !");
+            Console.WriteLine("Welcome to Generic classes !Starting the project");
         }
     }
 }
