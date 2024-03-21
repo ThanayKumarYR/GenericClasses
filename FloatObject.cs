@@ -6,31 +6,29 @@ using System.Threading.Tasks;
 
 namespace GenericClasses
 {
-    class IntegerObject
+    class FloatObject
     {
-        public int[] Number { get; set; } = { 0, 0, 0 };
+        public float[] Number { get; set; } = { 0, 0, 0 };
 
-        public void Display(int num)
+        public void Display(float num)
         {
             Console.WriteLine($"Largest number is {num}");
         }
 
         public void PrintObject()
         {
-            Console.Write("\n The enetered interger numbers are = ");
+            Console.Write("\n The enetered floating numbers are = ");
             foreach (float item in this.Number)
             {
                 Console.Write(item + ", ");
             }
             Console.WriteLine();
         }
-
-        public IntegerObject(int firstnumber,int secondnumber,int thirdnumber)
+        public FloatObject(float firstnumber,float secondnumber,float thirdnumber)
         {
             Number[0] = firstnumber;
             Number[1] = secondnumber;
             Number[2] = thirdnumber;
         }
-
     }
 }

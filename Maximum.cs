@@ -17,5 +17,15 @@ namespace GenericClasses
             }
             return large;
         }
+
+        public static float MaxOfInput(FloatObject floatnumber)
+        {
+            float large = 0;
+            foreach (float item in floatnumber.Number)
+            {
+                if (large < item) large = item;
+            }
+            return large;
+        }
     }
 }

@@ -15,8 +15,15 @@ namespace GenericClasses
             {
                 //Largest among integer numbers
                 IntegerObject integer = new IntegerObject(12, 43, 8);
-                int large = Maximum.MaxOfInput(integer);
-                integer.Display(large);
+                int largeint = Maximum.MaxOfInput(integer);
+                integer.PrintObject();
+                integer.Display(largeint);
+
+                //Largest among floating numbers
+                FloatObject floatObject = new FloatObject(0.4f, 0.35f, 0.6f);
+                float largefloat = Maximum.MaxOfInput(floatObject);
+                floatObject.PrintObject();
+                floatObject.Display(largefloat);
             }
             catch (Exception ex) 
             {

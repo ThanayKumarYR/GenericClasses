@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FloatObject.cs" />
     <Compile Include="IntegerObject.cs" />
     <Compile Include="Maximum.cs" />
     <Compile Include="Program.cs" />
