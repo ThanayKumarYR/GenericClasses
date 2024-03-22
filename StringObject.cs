@@ -8,7 +8,7 @@ namespace GenericClasses
 {
     class StringObject
     {
-        public string[] Strings { get; set; } = { "", "", "" };
+        public List<string> Strings { get; set; } = new List<string>();
 
         public void Display(string obg)
         {
@@ -17,18 +17,19 @@ namespace GenericClasses
 
         public void PrintObject()
         {
-            Console.Write("\n The enetered string numbers are = ");
+            Console.Write("\n The enetered strings are = ");
             foreach (string item in this.Strings)
             {
                 Console.Write(item + ", ");
             }
             Console.WriteLine();
         }
-        public StringObject(string firstnumber, string secondnumber, string thirdnumber)
+        public StringObject(params string[] strings)
         {
-            Strings[0] = firstnumber;
-            Strings[1] = secondnumber;
-            Strings[2] = thirdnumber;
+            foreach (var item in strings)
+            {
+                Strings.Add(item);
+            }
         }
     }
 }

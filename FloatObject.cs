@@ -8,11 +8,11 @@ namespace GenericClasses
 {
     class FloatObject
     {
-        public float[] Number { get; set; } = { 0, 0, 0 };
+        public List<float> Number { get; set; } = new List<float>();
 
         public void Display(float num)
         {
-            Console.WriteLine($"Largest number is {num}");
+            Console.WriteLine($"Largest float is {num}");
         }
 
         public void PrintObject()
@@ -24,11 +24,12 @@ namespace GenericClasses
             }
             Console.WriteLine();
         }
-        public FloatObject(float firstnumber,float secondnumber,float thirdnumber)
+        public FloatObject(params float[] floats)
         {
-            Number[0] = firstnumber;
-            Number[1] = secondnumber;
-            Number[2] = thirdnumber;
+            foreach (var item in floats)
+            {
+                Number.Add(item);
+            }
         }
     }
 }

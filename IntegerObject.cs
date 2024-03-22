@@ -8,11 +8,11 @@ namespace GenericClasses
 {
     class IntegerObject
     {
-        public int[] Number { get; set; } = { 0, 0, 0 };
+        public List<int> Number { get; set; } = new List<int>();
 
         public void Display(int num)
         {
-            Console.WriteLine($"Largest number is {num}");
+            Console.WriteLine($"Largest integer is {num}");
         }
 
         public void PrintObject()
@@ -25,11 +25,12 @@ namespace GenericClasses
             Console.WriteLine();
         }
 
-        public IntegerObject(int firstnumber,int secondnumber,int thirdnumber)
+        public IntegerObject(params int[] ints) 
         {
-            Number[0] = firstnumber;
-            Number[1] = secondnumber;
-            Number[2] = thirdnumber;
+            foreach (int item in ints)
+            {
+                Number.Add(item);
+            }
         }
 
     }
