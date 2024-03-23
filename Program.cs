@@ -102,7 +102,7 @@ namespace GenericClasses
                 GenericMax<float> floats = new GenericMax<float>(0.5f, 06.89f, 1.1f, 0.9f, 2.4f);
                 floats.TestMaximum();
 
-                GenericMax<string> strings = new GenericMax<string>("hi","am","Thanay","kumar","Y","R");
+                GenericMax<string> strings = new GenericMax<string>("hi", "am", "Thanay", "kumar", "Y", "Rgit");
                 strings.TestMaximum();
 
             }
