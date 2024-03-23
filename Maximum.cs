@@ -15,6 +15,7 @@ namespace GenericClasses
             {
                 if (large < item) large = item;
             }
+            PrintMax<int>(large);
             return large;
         }
 
@@ -25,6 +26,7 @@ namespace GenericClasses
             {
                 if (large < item) large = item;
             }
+            PrintMax<float>(large);
             return large;
         }
 
@@ -35,7 +37,13 @@ namespace GenericClasses
             {
                 if (large.CompareTo(item) < 0) large = item;
             }
+            PrintMax<string>(large);
             return large;
+        }
+
+        public static void PrintMax<T>(T variable)
+        { 
+            Console.WriteLine("Printing the largest via Generic Method: " + variable.ToString());
         }
     }
 }
