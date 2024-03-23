@@ -42,8 +42,19 @@ namespace GenericClasses
         }
 
         public static void PrintMax<T>(T variable)
-        { 
-            Console.WriteLine("Printing the largest via Generic Method: " + variable.ToString());
+        {
+            string items = string.Join(Environment.NewLine, variable);
+            Console.WriteLine("Printing the largest via Generic Method: " + items);
+        }
+
+        public static void TestMaximum<T>(List<T> arr)
+        {
+            T large = arr.ElementAt(0);
+            foreach (T item in arr)
+            {
+                if(Comparer<T>.Default.Compare(large,item)<0) large = item;
+            }
+            PrintMax<T>(large);  
         }
     }
 }
